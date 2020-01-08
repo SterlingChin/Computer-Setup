@@ -41,7 +41,7 @@ This is a list of things that I use for my computer and how to set them all up.
 
 ## Shell:
 * https://github.com/bhilburn/powerlevel9k
-* https://medium.com/the-code-review/make-your-terminal-more-colourful-and-productive-with-iterm2-and-zsh-11b91607b98c
+* https://web.archive.org/web/20190201140058/https://medium.com/the-code-review/make-your-terminal-more-colourful-and-productive-with-iterm2-and-zsh-11b91607b98c
 
 ### Put the follow in `vi .zshrc`
 ```source /usr/local/opt/powerlevel9k@0.6.3/powerlevel9k.zsh-theme
