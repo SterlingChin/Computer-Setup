@@ -1,0 +1,110 @@
+{
+	"console.log": {
+		"prefix": "con",
+		"body": ["console.log('$1', $1);"],
+		"description": "Console Log"
+	},
+	"console.log({})": {
+	"prefix": "cons",
+	"body": ["console.log({ $1 });"],
+	"description": "Console Log with a structured object"
+	},
+	"Describe": {
+	"prefix": "describe",
+	"body": ["describe('$1', ($2) => {", "\t$3", "});"],
+	"description": "Describe block for testing"
+	},
+	"beforeEach": {
+	"prefix": "beforeEach",
+	"body": ["beforeEach(($1) => {", "\t$2", "});"],
+	"description": "Before-each block"
+	},
+	"it": {
+	"prefix": "test",
+	"body": ["it('should $1', ($2) => {", "\t$3", "});"],
+	"description": "It block"
+	},
+	"expect": {
+	"prefix": "expect",
+	"body": ["expect($1).$2($3);$4"],
+	"description": "Expect"
+	},
+	"require": {
+	"prefix": "require",
+	"body": ["require('$1');$2"],
+	"description": "Require"
+	},
+	"styled": {
+	"prefix": "styled",
+	"body": [
+		"const $1 = styled('div')`\r",
+		"    $2\r",
+		"`\r",
+		"$1.displayName = '$1'\r",
+	],
+	"description": "Styled"
+	},
+	"React starter": {
+	"prefix": "react",
+	"body": [
+		"import React from 'react';\r",
+		"import styled from '@emotion/styled';\r",
+		"import PropTypes from 'prop-types';\r",
+		"\r",
+		"const $2 = styled('div')`\r",
+		"    \r",
+		"`\r",
+		"$2.displayName = '$2'\r",
+		"\r",
+		"export const $1 = ({props}) => {\r",
+		"    return (\r",
+		"        <$2>\r",
+		"            <h1>Page Header</h1>\r",
+		"        </$2>\r",
+		"    );\r",
+		"};\r",
+		"\r",
+		"$1.propTypes = {\r",
+		"    \r",
+		"}\r",
+		"\r",
+		"export default $1\r",
+		"\r",
+	],
+	"description": "React starter"
+	},
+	"Test starter": {
+	"prefix": "test-starter",
+	"body": [
+		"import React from 'react';\r",
+		"import Adapter from 'enzyme-adapter-react-16';\r",
+		"import { configure, shallow } from 'enzyme';\r",
+		"import $1 from './$2';\r",
+		"\r",
+		"configure({ adapter: new Adapter() });\r",
+		"\r",
+		"describe('$1 Test', () => {\r",
+		"    it('should render', () => {\r",
+		"        const wrapper = shallow(<$1/>)\r",
+		"        expect(wrapper).toBeTruthy()\r",
+		"    })\r",
+		"});\r",
+		"\r",
+	],
+	"description": "Test starter"
+	},
+	"isMobile": {
+	"prefix": "mobile",
+	"body": [
+		"${({isMobile}) => isMobile ? '$1' :'$2'}"
+	],
+	"description": "isMobile"
+	},
+	"New Bill": {
+	"prefix": "bill",
+	"body": [
+		"{ day: $1, name: '$2', type: '$3', onAutopay: $4, gracePeriod: '$5', value: '$6' },",
+	],
+	"description": "New Bill"
+	}
+}
