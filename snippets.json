@@ -34,48 +34,103 @@
 	"body": ["require('$1');$2"],
 	"description": "Require"
 	},
-	"styled": {
+	"Styled Component": {
 	"prefix": "styled",
 	"body": [
-		"const $1 = styled('div')`\r",
-		"    $2\r",
+		"const $1 = styled('$2')`\r",
+		"  $3\r",
 		"`\r",
 		"$1.displayName = '$1'\r",
 	],
-	"description": "Styled"
+	"description": "Styled Component"
 	},
-	"React starter": {
-	"prefix": "react",
+	"React Starter": {
+	"prefix": "react-props",
 	"body": [
 		"import React from 'react';\r",
-		"import styled from '@emotion/styled';\r",
+		"import styled from '@emotion/styled/macro';\r",
 		"import PropTypes from 'prop-types';\r",
 		"\r",
-		"const $2 = styled('div')`\r",
-		"    \r",
+		"const $1Container = styled('div')`\r",
+		"  \r",
 		"`\r",
-		"$2.displayName = '$2'\r",
+		"$1Container.displayName = '$1Container'\r",
 		"\r",
 		"export const $1 = ({props}) => {\r",
-		"    return (\r",
-		"        <$2>\r",
-		"            <h1>Page Header</h1>\r",
-		"        </$2>\r",
-		"    );\r",
+		"  return (\r",
+		"    <$1Container>\r",
+		"      <h1>$1</h1>\r",
+		"    </$1Container>\r",
+		"  );\r",
 		"};\r",
 		"\r",
 		"$1.propTypes = {\r",
-		"    \r",
+		"  \r",
 		"}\r",
 		"\r",
 		"export default $1\r",
 		"\r",
 	],
-	"description": "React starter"
+	"description": "React Starter"
 	},
-	"Test starter": {
-	"prefix": "test-starter",
+	"React Dumb": {
+		"prefix": "react-dumb",
+		"body": [
+		"import React from 'react';\r",
+		"import styled from '@emotion/styled/macro';\r",
+		"\r",
+		"const $1Container = styled('div')`\r",
+		"  \r",
+		"`\r",
+		"$1Container.displayName = '$1Container'\r",
+		"\r",
+		"export const $1 = () => {\r",
+		"  return (\r",
+		"    <$1Container>\r",
+		"      <h1>$1</h1>\r",
+		"    </$1Container>\r",
+		"  );\r",
+		"};\r",
+		"\r",
+		"export default $1\r",
+		"\r",
+	],
+	"description": "React Dumb"
+},
+	"React Index": {
+		"prefix": "react-index",
+		"body": [
+		"import React from 'react';\r",
+		"\r",
+		"export const App = () => {\r",
+		"  return (\r",
+		"    <>\r",
+		"    </>\r",
+		"  );\r",
+		"};\r",
+		"\r",
+		"export default App;\r"
+	],
+	"description": "React Index"
+},
+"React App": {
+	"prefix": "react-app",
 	"body": [
+		"import React from 'react';\r",
+		"import ReactDOM from 'react-dom';\r",
+		"import App from './App';\r",
+		"\r",
+		"ReactDOM.render(\r",
+		"  <React.StrictMode>\r",
+		"    <App />\r",
+		"  </React.StrictMode>,\r",
+		");\r"
+	],
+	"description": "React App"
+},
+	"Test starter": {
+		"prefix": "test-starter",
+		"body": [
 		"import React from 'react';\r",
 		"import Adapter from 'enzyme-adapter-react-16';\r",
 		"import { configure, shallow } from 'enzyme';\r",
@@ -84,10 +139,10 @@
 		"configure({ adapter: new Adapter() });\r",
 		"\r",
 		"describe('$1 Test', () => {\r",
-		"    it('should render', () => {\r",
-		"        const wrapper = shallow(<$1/>)\r",
-		"        expect(wrapper).toBeTruthy()\r",
-		"    })\r",
+		"  it('should render', () => {\r",
+		"    const wrapper = shallow(<$1/>)\r",
+		"    expect(wrapper).toBeTruthy()\r",
+		"  })\r",
 		"});\r",
 		"\r",
 	],
@@ -106,5 +161,60 @@
 		"{ day: $1, name: '$2', type: '$3', onAutopay: $4, gracePeriod: '$5', value: '$6' },",
 	],
 	"description": "New Bill"
+	},
+	"Chakra Starter": {
+	"prefix": "chakra-props",
+	"body": [
+		"import { $2 as Chakra$2 } from '@chakra-ui/react';\r",
+		"import PropTypes from 'prop-types';\r",
+		"import React from 'react'\r",
+		"\r",
+		"const $1 = props => {\r",
+		"  return (\r",
+		"    <Chakra$2 />\r",
+		"  );\r",
+		"};\r",
+		"\r",
+		"$1.propTypes = {\r",
+		"  \r",
+		"};\r",
+		"\r",
+		"$1.defaultProps = {\r",
+		"  \r",
+		"};\r",
+		"\r",
+		"export default $1\r",
+	],
+	"description": "Chakra Starter"
+	},
+	"Story Starter": {
+		"prefix": "story",
+		"body": [
+			"import React from 'react';\r",
+			"\r",
+			"import $1 from './$1';\r",
+			"\r",
+			"// eslint-disable-next-line import/no-anonymous-default-export\r",
+			"export default {\r",
+			"  title: '$2',\r",
+			"  component: '$3',\r",
+			"  argTypes: {}\r",
+			"};\r",
+			"\r",
+			"const Template = args => <$1 {...args} />;\r",
+			"\r",
+			"export const $4 = Template.bind({});\r",
+			"$4.args = {};\r",
+		],
+		"description": "Story Starter"
+	},
+	"comment" : {
+		"prefix": "comment",
+		"body": [
+			"/**\r",
+			"  $1\r",
+			"*/\r"
+		],
+		"description": "comment"
 	}
 }
