@@ -1,9 +1,7 @@
 export PATH="/usr/local/opt/ruby/bin:$PATH"
 export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
-# export GEM_HOME=$HOME/.gem/
-# export PATH="/usr/local/opt/ruby/bin:$PATH"
-# export PATH="/usr/local/sbin:$PATH"
-# export PATH="$GEM_HOME/bin:$PATH"
+export PATH="/usr/local/Cellar/rabbitmq/3.6.14/sbin:$PATH"
+
 POWERLEVEL9K_MODE=nerdfont-complete
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 POWERLEVEL9K_RPROMPT_ON_NEWLINE=true
@@ -64,7 +62,81 @@ POWERLEVEL9K_CUSTOM_OS_ICON_BACKGROUND=red
 POWERLEVEL9K_CUSTOM_OS_ICON_FOREGROUND=white
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(custom_os_icon ssh root_indicator dir dir_writable vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(custom_wifi_signal time battery ram)
+
+alias charles="buildkp"
+buildkp () {
+        mv .env .env-saved
+        mv .env.prod .env
+        yarn run build
+        mv .env .env.prod  
+        mv .env-saved .env
+        find ~/podium/kazaam/build/static/js/ -type f -name "main.*.js" -exec cp {} ~/podium/kazaam/build/static/js/main.chunk.js \;
+        find ~/podium/kazaam/build/static/js/ -type f -name "0.*.js" -exec cp {} ~/podium/kazaam/build/static/js/0.chunk.js \;
+        find ~/podium/kazaam/build/static/js/ -type f -name "1.*.js" -exec cp {} ~/podium/kazaam/build/static/js/1.chunk.js \;
+        find ~/podium/kazaam/build/static/js/ -type f -name "2.*.js" -exec cp {} ~/podium/kazaam/build/static/js/2.chunk.js \;
+        find ~/podium/kazaam/build/static/js/ -type f -name "3.*.js" -exec cp {} ~/podium/kazaam/build/static/js/3.chunk.js \;
+        find ~/podium/kazaam/build/static/js/ -type f -name "4.*.js" -exec cp {} ~/podium/kazaam/build/static/js/4.chunk.js \;
+        find ~/podium/kazaam/build/static/js/ -type f -name "5.*.js" -exec cp {} ~/podium/kazaam/build/static/js/5.chunk.js \;
+        find ~/podium/kazaam/build/static/js/ -type f -name "6.*.js" -exec cp {} ~/podium/kazaam/build/static/js/6.chunk.js \;
+        find ~/podium/kazaam/build/static/js/ -type f -name "7.*.js" -exec cp {} ~/podium/kazaam/build/static/js/7.chunk.js \;
+        find ~/podium/kazaam/build/static/js/ -type f -name "8.*.js" -exec cp {} ~/podium/kazaam/build/static/js/8.chunk.js \;
+        find ~/podium/kazaam/build/static/js/ -type f -name "9.*.js" -exec cp {} ~/podium/kazaam/build/static/js/9.chunk.js \;
+        find ~/podium/kazaam/build/static/js/ -type f -name "10.*.js" -exec cp {} ~/podium/kazaam/build/static/js/10.chunk.js \;
+        find ~/podium/kazaam/build/static/js/ -type f -name "11.*.js" -exec cp {} ~/podium/kazaam/build/static/js/11.chunk.js \;
+        find ~/podium/kazaam/build/static/js/ -type f -name "12.*.js" -exec cp {} ~/podium/kazaam/build/static/js/12.chunk.js \;
+        find ~/podium/kazaam/build/static/js/ -type f -name "13.*.js" -exec cp {} ~/podium/kazaam/build/static/js/13.chunk.js \;
+        find ~/podium/kazaam/build/static/js/ -type f -name "14.*.js" -exec cp {} ~/podium/kazaam/build/static/js/14.chunk.js \;
+        find ~/podium/kazaam/build/static/js/ -type f -name "15.*.js" -exec cp {} ~/podium/kazaam/build/static/js/15.chunk.js \;
+        find ~/podium/kazaam/build/static/js/ -type f -name "16.*.js" -exec cp {} ~/podium/kazaam/build/static/js/16.chunk.js \;
+        find ~/podium/kazaam/build/static/js/ -type f -name "17.*.js" -exec cp {} ~/podium/kazaam/build/static/js/17.chunk.js \;
+        find ~/podium/kazaam/build/static/js/ -type f -name "18.*.js" -exec cp {} ~/podium/kazaam/build/static/js/18.chunk.js \;
+        find ~/podium/kazaam/build/static/js/ -type f -name "19.*.js" -exec cp {} ~/podium/kazaam/build/static/js/19.chunk.js \;
+        find ~/podium/kazaam/build/static/js/ -type f -name "20.*.js" -exec cp {} ~/podium/kazaam/build/static/js/20.chunk.js \;
+        find ~/podium/kazaam/build/static/js/ -type f -name "21.*.js" -exec cp {} ~/podium/kazaam/build/static/js/21.chunk.js \;
+        find ~/podium/kazaam/build/static/js/ -type f -name "22.*.js" -exec cp {} ~/podium/kazaam/build/static/js/22.chunk.js \;
+        find ~/podium/kazaam/build/static/js/ -type f -name "23.*.js" -exec cp {} ~/podium/kazaam/build/static/js/23.chunk.js \;
+        find ~/podium/kazaam/build/static/js/ -type f -name "24.*.js" -exec cp {} ~/podium/kazaam/build/static/js/24.chunk.js \;
+        find ~/podium/kazaam/build/static/js/ -type f -name "25.*.js" -exec cp {} ~/podium/kazaam/build/static/js/25.chunk.js \;
+        find ~/podium/kazaam/build/static/js/ -type f -name "26.*.js" -exec cp {} ~/podium/kazaam/build/static/js/26.chunk.js \;
+        find ~/podium/kazaam/build/static/js/ -type f -name "27.*.js" -exec cp {} ~/podium/kazaam/build/static/js/27.chunk.js \;
+        find ~/podium/kazaam/build/static/js/ -type f -name "28.*.js" -exec cp {} ~/podium/kazaam/build/static/js/28.chunk.js \;
+        find ~/podium/kazaam/build/static/js/ -type f -name "29.*.js" -exec cp {} ~/podium/kazaam/build/static/js/29.chunk.js \;
+        find ~/podium/kazaam/build/static/js/ -type f -name "30.*.js" -exec cp {} ~/podium/kazaam/build/static/js/30.chunk.js \;
+        find ~/podium/kazaam/build/static/js/ -type f -name "31.*.js" -exec cp {} ~/podium/kazaam/build/static/js/31.chunk.js \;
+        find ~/podium/kazaam/build/static/js/ -type f -name "32.*.js" -exec cp {} ~/podium/kazaam/build/static/js/32.chunk.js \;
+        find ~/podium/kazaam/build/static/js/ -type f -name "33.*.js" -exec cp {} ~/podium/kazaam/build/static/js/33.chunk.js \;
+        find ~/podium/kazaam/build/static/js/ -type f -name "34.*.js" -exec cp {} ~/podium/kazaam/build/static/js/34.chunk.js \;
+        find ~/podium/kazaam/build/static/js/ -type f -name "35.*.js" -exec cp {} ~/podium/kazaam/build/static/js/35.chunk.js \;
+        find ~/podium/kazaam/build/static/js/ -type f -name "36.*.js" -exec cp {} ~/podium/kazaam/build/static/js/36.chunk.js \;
+        find ~/podium/kazaam/build/static/js/ -type f -name "37.*.js" -exec cp {} ~/podium/kazaam/build/static/js/37.chunk.js \;
+        find ~/podium/kazaam/build/static/js/ -type f -name "38.*.js" -exec cp {} ~/podium/kazaam/build/static/js/38.chunk.js \;
+        find ~/podium/kazaam/build/static/js/ -type f -name "39.*.js" -exec cp {} ~/podium/kazaam/build/static/js/39.chunk.js \;
+        find ~/podium/kazaam/build/static/js/ -type f -name "40.*.js" -exec cp {} ~/podium/kazaam/build/static/js/40.chunk.js \;
+        find ~/podium/kazaam/build/static/js/ -type f -name "41.*.js" -exec cp {} ~/podium/kazaam/build/static/js/41.chunk.js \;
+        find ~/podium/kazaam/build/static/js/ -type f -name "42.*.js" -exec cp {} ~/podium/kazaam/build/static/js/42.chunk.js \;
+        find ~/podium/kazaam/build/static/js/ -type f -name "43.*.js" -exec cp {} ~/podium/kazaam/build/static/js/43.chunk.js \;
+        find ~/podium/kazaam/build/static/js/ -type f -name "44.*.js" -exec cp {} ~/podium/kazaam/build/static/js/44.chunk.js \;
+        find ~/podium/kazaam/build/static/js/ -type f -name "45.*.js" -exec cp {} ~/podium/kazaam/build/static/js/45.chunk.js \;
+        find ~/podium/kazaam/build/static/js/ -type f -name "46.*.js" -exec cp {} ~/podium/kazaam/build/static/js/46.chunk.js \;
+        find ~/podium/kazaam/build/static/js/ -type f -name "47.*.js" -exec cp {} ~/podium/kazaam/build/static/js/47.chunk.js \;
+        find ~/podium/kazaam/build/static/js/ -type f -name "48.*.js" -exec cp {} ~/podium/kazaam/build/static/js/48.chunk.js \;
+        find ~/podium/kazaam/build/static/js/ -type f -name "49.*.js" -exec cp {} ~/podium/kazaam/build/static/js/49.chunk.js \;
+        find ~/podium/kazaam/build/static/js/ -type f -name "50.*.js" -exec cp {} ~/podium/kazaam/build/static/js/50.chunk.js \;
+        find ~/podium/kazaam/build/static/css/ -type f -name "*.css" -exec cp {} ~/podium/kazaam/build/static/css/ \;
+        # find ~/podium/kazaam/build/static/css/ -type f -name "*.css.map" -exec cp {} ~/podium/kazaam/build/static/css/ \;
+        echo "Copied kazaam build files to proxy destination."
+}
+
+# Brew Completion
+if type brew &>/dev/null; then
+        FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
+fi
+
 source /usr/local/opt/powerlevel9k/powerlevel9k.zsh-theme
 source ~/.bash_profile
+source /usr/local/opt/asdf/asdf.sh
 . /usr/local/opt/asdf/asdf.sh
 . /usr/local/opt/asdf/etc/bash_completion.d/asdf.bash
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
