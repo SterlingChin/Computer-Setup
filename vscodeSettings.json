@@ -1,0 +1,64 @@
+{
+  "editor.fontFamily": "Anonymous Pro",
+  "editor.fontLigatures": true,
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "workbench.iconTheme": "vscode-icons",
+  "workbench.colorTheme": "One Dark",
+  "editor.fontSize": 14,
+  "editor.fontWeight": "500",
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "workbench.colorCustomizations": {
+      "sideBarSectionHeader.foreground": "#c5c5c5",
+      "tab.activeForeground": "#f39c12",
+  },
+  "editor.accessibilitySupport": "off",
+  "vsicons.dontShowNewVersionMessage": true,
+  "java.configuration.checkProjectSettingsExclusions": false,
+  "editor.tokenColorCustomizations": {
+      "textMateRules": [
+          {
+              "name": "One Dark italic",
+              "scope": [
+                  "comment",
+                  "entity.other.attribute-name",
+                  "keyword",
+                  "markup.underline.link",
+                  "storage.modifier",
+                  "storage.type",
+                  "string.url",
+                  "variable.language.super",
+                  "variable.language.this"
+              ],
+              "settings": {
+                  "fontStyle": "italic"
+              }
+          },
+          {
+              "name": "One Dark italic reset",
+              "scope": [
+                  "keyword.operator",
+                  "keyword.other.type",
+                  "storage.modifier.import",
+                  "storage.modifier.package",
+                  "storage.type.built-in",
+                  "storage.type.function.arrow",
+                  "storage.type.generic",
+                  "storage.type.java",
+                  "storage.type.primitive"
+              ],
+              "settings": {
+                  "fontStyle": ""
+              }
+          }
+      ]
+  },
+  "breadcrumbs.filePath": "off",
+  "diffEditor.ignoreTrimWhitespace": false,
+  "beautify.config": "",
+  "explorer.confirmDragAndDrop": false,
+  "bracket-pair-colorizer-2.depreciation-notice": false,
+  "bracketPairColorizer.depreciation-notice": false,
+  "window.zoomLevel": 3
+}
